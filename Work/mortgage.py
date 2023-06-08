@@ -22,12 +22,12 @@ while principal > 0:
         total_paid = total_paid + extra_payment
 
     if principal <= payment: # 1.11 Bonus
-        print(f"{months} {round(total_paid, 2)} {round(principal, 2)}")
+        print(f"{months} ${round(total_paid, 2):.2f} ${round(principal, 2):.2f}")
         payment = principal
         total_paid = total_paid + payment
         principal = principal - payment
 
-    print(f"{months} {round(total_paid, 2)} {round(principal, 2)}")
+    print(f"{months} ${round(total_paid, 2):.2f} ${round(principal, 2):.2f}")
 
-print('Total paid', round(total_paid, 1))
-print('Months', months)
+print(f'The total amount paid is: ${round(total_paid, 1):0.2f}')
+print(f'The total months it took to pay off the mortgage was {months} months')
